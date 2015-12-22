@@ -6,7 +6,7 @@
 	<link href="http://fonts.useso.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext" rel='stylesheet'>	
     <link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 </head>
-<body>
+<body onload="getCookieMin()">
 	<header></header>
 	<container> 
 		<section class="timer">
@@ -181,7 +181,7 @@
 						<option value="9">9组</option>
 						<option value="10">10组</option>
 					</select>
-					<p>每组后的休息时间？</p><select name="long_minutes" id="long_minutes" onchange="setTimer('next')">
+					<p>每组后的休息时间？</p><select name="long_minutes" id="long_minutes" onchange="setTimer('long')">
 						<option value="01">01:00</option>
 						<option value="02">02:00</option>
 						<option value="03">03:00</option>

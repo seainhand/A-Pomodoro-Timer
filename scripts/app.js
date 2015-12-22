@@ -6,33 +6,63 @@ var cur_long_time = new Date(1000 * 60 * 40);
 var temp_time = null;
 var goal_main_num = 4;
 var goal_turn = 2;
-var goal_all_num = goal_main_num*2*goal_turn;
+var goal_all_num = goal_main_num * 2 * goal_turn;
 var main_num = 0;
 var all_num = 0;
 var interval = null;
 
-function getSelect(id){
+function setCookieMin(){
+	var data= new Date();
+	data.setHours(data.getHours() + (24 * 30 * 6)); //保存六个月 
+	var cookieString = "PomodoroTimer:"+window.cur_main_time.getMinutes()+"n"+window.cur_next_time.getMinutes()+"n"+window.cur_long_time.getMinutes()+"n"+window.goal_main_num+"n"+window.goal_turn;
+	document.cookie = cookieString+";visited=yes; expires=" + data.toGMTString();  
+}
+
+function getCookieMin(){  
+	if (document.cookie) {
+		var cString = document.cookie;
+		var bString = cString.split(";");
+		var	arrString = bString[0].split(":");
+		var arr = arrString[1].split("n");
+		getId("main_minutes").options[arr[0]-1].selected = true;
+		setTimer("main");
+		getId("next_minutes").options[arr[1]-1].selected = true;
+		setTimer("next");
+		getId("long_minutes").options[arr[2]-1].selected = true;
+		setTimer("long");
+		getId("select_goal_main_num").options[arr[3]-1].selected = true;
+		setMainNum();
+		getId("select_goal_turn").options[arr[4]-1].selected = true;
+		setTurn();
+	}else{
+		return false;
+	}
+}
+
+function getSelect(id) {
 	var objS = getId(id);
 	var time = objS.options[objS.selectedIndex].value;
 	return time;
 }
 
-function setMainNum(){
+function setMainNum() {
 	var num = getSelect("select_goal_main_num");
 	window.goal_main_num = num;
-	window.goal_all_num = window.goal_main_num*2*window.goal_turn;
+	window.goal_all_num = window.goal_main_num * 2 * window.goal_turn;
 	getId("goal_all_num").innerText = window.goal_all_num;
 	getId("goal_main_num").innerText = num;
+	setCookieMin();
 }
 
-function setTurn(){
+function setTurn() {
 	var num = getSelect("select_goal_turn");
 	window.goal_turn = num;
-	window.goal_all_num = window.goal_main_num*2*window.goal_turn;
+	window.goal_all_num = window.goal_main_num * 2 * window.goal_turn;
 	getId("goal_all_num").innerText = window.goal_all_num;
+	setCookieMin();
 }
 
-function timerStart(timer_btn,timer) {
+function timerStart(timer_btn, timer) {
 	btnReset();
 	window.clearInterval(interval)
 	if (timer == "main") {
@@ -41,46 +71,45 @@ function timerStart(timer_btn,timer) {
 		getId("next_timer").innerHTML = time + ":" + "00";
 	};
 	if (timer == "next") {
-		var time = getSelect("main_minutes"); 
+		var time = getSelect("main_minutes");
 		window.cur_main_time = new Date(1000 * 60 * time);;
 		getId("main_timer").innerHTML = time + ":" + "00";
 	};
-	play(timer_btn,timer);
+	play(timer_btn, timer);
 
 }
 
 function skip(skip) {
-	if(skip.id == "skip_main"){
+	if (skip.id == "skip_main") {
 		window.main_num += 1;
-		window.all_num += 1; 
-		if(window.main_num%window.goal_main_num == 0){
+		window.all_num += 1;
+		if (window.main_num % window.goal_main_num == 0) {
 			window.temp_time = window.cur_next_time;
-			window.cur_next_time = window.cur_long_time;  
+			window.cur_next_time = window.cur_long_time;
 			var objS = getId("long_minutes");
 			var time = objS.options[objS.selectedIndex].value;
-			getId("next_timer").innerHTML = time + ":" + "00"; 
+			getId("next_timer").innerHTML = time + ":" + "00";
 		}
-		timerStart("next_timer_play","next");
-		skip.id = "skip_next"; 
-		document.getElementById("main").className="next";
-		document.getElementById("next").className="main";
-	}
-	else if(skip.id == "skip_next"){
-		timerStart("main_timer_play","main");
+		timerStart("next_timer_play", "next");
+		skip.id = "skip_next";
+		document.getElementById("main").className = "next";
+		document.getElementById("next").className = "main";
+	} else if (skip.id == "skip_next") {
+		timerStart("main_timer_play", "main");
 		skip.id = "skip_main";
 		window.all_num += 1;
-		if((window.main_num%window.goal_main_num == 0)&&(window.all_num%window.main_num==0)){
-			var objS = getId("long_minutes");  
+		if ((window.main_num % window.goal_main_num == 0) && (window.all_num % window.main_num == 0)) {
+			var objS = getId("long_minutes");
 		}
-		if(window.all_num == goal_all_num){
+		if (window.all_num == goal_all_num) {
 			window.all_num = 0;
 			window.main_num = 0;
 			btnReset();
 			window.clearInterval(interval)
 			alert("恭喜你！完成了！");
 		}
-		document.getElementById("main").className="main";
-		document.getElementById("next").className="next";
+		document.getElementById("main").className = "main";
+		document.getElementById("next").className = "next";
 	}
 	getId("main_num").innerText = window.main_num;
 	getId("all_num").innerText = window.all_num;
@@ -108,12 +137,14 @@ function setTimer(timer) {
 	var objS = getId(timer + "_minutes");
 	var time = objS.options[objS.selectedIndex].value;
 	if (timer == "main") {
-		window.cur_main_time = new Date(1000 * 60 * time);;
+		window.cur_main_time = new Date(1000 * 60 * time);
+		getId(timer + "_timer").innerHTML = time + ":" + "00";
 	};
 	if (timer == "next") {
-		window.cur_next_time = new Date(1000 * 60 * time);;
+		window.cur_next_time = new Date(1000 * 60 * time);
+		getId(timer + "_timer").innerHTML = time + ":" + "00";
 	};
-	getId(timer + "_timer").innerHTML = time + ":" + "00";
+	setCookieMin();
 }
 
 function play(play_btn, timer) {
@@ -173,7 +204,7 @@ function checkTime(i) {
 	return i;
 }
 
- 
+
 // function setTime(interTimes) {
 // 	var add_Times = parseInt(interTimes);
 // 	var final_time = new Date(Date.parse(cur_main_time) + add_Times);
