@@ -2418,12 +2418,20 @@ container .timer .main select {
   text-align: center;
 }
 /* line 62, ../sass/style.scss */
+container .timer .main #next_minutes {
+  outline-color: #4CB0F9;
+}
+/* line 65, ../sass/style.scss */
+container .timer .main #main_minutes {
+  outline-color: #ff7680;
+}
+/* line 68, ../sass/style.scss */
 container .timer .main .iinner {
   height: 348px;
   text-align: left;
   zoom: 1;
 }
-/* line 65, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 container .timer .main .iinner i {
   width: 120px;
   height: 120px;
@@ -2432,7 +2440,7 @@ container .timer .main .iinner i {
   border: 10px solid #ff7680;
   border-radius: 100%;
 }
-/* line 66, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 container .timer .main .iinner i::before {
   text-align: center;
   width: 120px;
@@ -2446,18 +2454,18 @@ container .timer .main .iinner:after {
   visibility: hidden;
   height: 0;
 }
-/* line 80, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 container .timer .main .icon-play {
   cursor: pointer;
   position: absolute;
 }
-/* line 84, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 container .timer .main .icon-pause {
   cursor: pointer;
   display: none;
   position: absolute;
 }
-/* line 90, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 container .timer .next {
   display: none;
   float: left;
@@ -2471,7 +2479,7 @@ container:after {
   height: 0;
 }
 
-/* line 99, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .skip {
   color: #666;
   background-color: #000;
@@ -2481,10 +2489,9 @@ container:after {
   font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-decoration: none;
   text-align: center;
-  width: 200px;
   line-height: 80px;
   height: 80px;
-  width: 340px;
+  width: 360px;
   margin: 0;
   display: inline-block;
   appearance: none;
@@ -2500,19 +2507,19 @@ container:after {
   transition-duration: .3s;
 }
 
-/* line 126, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .skip:visited {
   color: #666;
 }
 
-/* line 129, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .skip:hover, .skip:focus {
   background-color: #f6f6f6;
   text-decoration: none;
   outline: none;
 }
 
-/* line 134, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 .skip:active, .skip.active, .skip.is-active {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
   text-decoration: none;
@@ -2525,49 +2532,49 @@ container:after {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* line 146, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 #skip_main {
   background-color: #ff7680;
   border-color: #ff7680;
   color: #FFF;
 }
 
-/* line 152, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 #skip_next:hover, #skip_next:focus {
   background-color: #1B9AF7;
   border-color: #1B9AF7;
   color: #FFF;
 }
 
-/* line 157, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 #skip_next:active, #skip_next.active, #skip_next.is-active {
   background-color: #1B9AF7;
   border-color: #1B9AF7;
   color: #fff;
 }
 
-/* line 163, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 #skip_next {
   background-color: #4CB0F9;
   border-color: #4CB0F9;
   color: #FFF;
 }
 
-/* line 170, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 #skip_main:hover, #skip_main:focus {
   background-color: #FF4351;
   border-color: #FF4351;
   color: #FFF;
 }
 
-/* line 175, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 #skip_main:active, #skip_main.active, #skip_main.is-active {
   background-color: #FF4351;
   border-color: #FF4351;
   color: #fff;
 }
 
-/* line 181, ../sass/style.scss */
+/* line 186, ../sass/style.scss */
 .set {
   padding-top: 50px;
   float: left;
@@ -2575,7 +2582,7 @@ container:after {
   height: 100%;
   margin-left: -50%;
 }
-/* line 188, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 .set fieldset {
   margin-top: 50px;
   width: 40%;
@@ -2591,22 +2598,23 @@ container:after {
   -webkit-box-shadow: 3px 3px 10px #666;
   position: relative;
 }
-/* line 189, ../sass/style.scss */
+/* line 194, ../sass/style.scss */
 .set fieldset p, .set fieldset div {
   padding-top: 20px;
 }
-/* line 192, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 .set fieldset span {
   font-weight: bold;
   font-size: 20px;
   margin-left: 5px;
 }
-/* line 197, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .set fieldset select {
+  outline-color: #424b50;
   padding-left: 1em;
   margin-top: 5px;
   background: #fff;
-  border: 3px solid #81c220;
+  border: 3px solid #424b50;
   height: 40px;
   -webkit-appearance: none;
   /*for chrome*/
@@ -2615,10 +2623,10 @@ container:after {
   width: 340px;
   text-align: center;
 }
-/* line 226, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 .set fieldset legend {
   padding: 5px 10px;
-  background-color: #81c220;
+  background-color: #424b50;
   color: #FFF;
   border-radius: 3px;
   -moz-border-radius: 3px;
@@ -2631,7 +2639,7 @@ container:after {
   top: -11px;
 }
 
-/* line 247, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 footer {
   height: 200px;
 }

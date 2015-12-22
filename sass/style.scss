@@ -4,7 +4,7 @@
 $main_color : #ff7680;
 $next_color : #4CB0F9;
 $right_section_width : 50%;
-$set_color : rgb(129,194,32);
+$set_color : #424b50;
 @mixin clearfix() {
 	&:after{
 		display:block;
@@ -58,7 +58,13 @@ container{
 				width: 20em;
 				height: 3em;
 				text-align: center;
-			} 
+			}  
+			#next_minutes{
+				outline-color:$next_color;
+			}
+			#main_minutes{
+				outline-color:$main_color;
+			}
 			.iinner{
 				height: 348px;
 				text-align: left;
@@ -104,11 +110,10 @@ container{
 	font-size: 36px;
 	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	text-decoration: none;
-	text-align: center;
-	width: 200px;
+	text-align: center; 
 	line-height: 80px;
 	height: 80px; 
-	width: 340px;
+	width: 360px;
 	margin: 0;
 	display: inline-block;
 	appearance: none;
@@ -195,6 +200,7 @@ container{
 			margin-left: 5px;
 		}
 		select{ 
+			outline-color:$set_color;
 			padding-left: 1em;
 			margin-top: 5px;
 			background: #fff;  

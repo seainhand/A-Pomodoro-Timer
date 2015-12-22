@@ -75,6 +75,8 @@ function skip(skip) {
 		if(window.all_num == goal_all_num){
 			window.all_num = 0;
 			window.main_num = 0;
+			btnReset();
+			window.clearInterval(interval)
 			alert("恭喜你！完成了！");
 		}
 		document.getElementById("main").className="main";
