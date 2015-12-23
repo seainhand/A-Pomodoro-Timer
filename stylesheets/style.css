@@ -2364,46 +2364,54 @@ a .icon-flip-vertical:before {
   content: "\f18b";
 }
 
-/* line 20, ../sass/style.scss */
+/* line 19, ../sass/style.scss */
+* {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+}
+
+/* line 26, ../sass/style.scss */
 body {
   background-color: #fff;
 }
 
-/* line 24, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 header {
   height: 3rem;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 container {
   height: 80rem;
   zoom: 1;
 }
-/* line 30, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 container .timer {
   float: left;
   width: 100%;
   height: 100%;
   text-align: center;
 }
-/* line 35, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 container .timer .inner {
   margin-left: 10%;
   margin-right: 50%;
 }
-/* line 39, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 container .timer .main {
   height: 100%;
   width: 20.5rem;
   margin-left: 25%;
 }
-/* line 43, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 container .timer .main div {
   height: 100%;
   color: #ff7680;
   font-size: 8rem;
 }
-/* line 48, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 container .timer .main select {
   background: #fff;
   padding: 5px;
@@ -2417,21 +2425,21 @@ container .timer .main select {
   height: 3rem;
   text-align: center;
 }
-/* line 60, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 container .timer .main #next_minutes {
   outline-color: #4CB0F9;
 }
-/* line 63, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 container .timer .main #main_minutes {
   outline-color: #ff7680;
 }
-/* line 66, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 container .timer .main .iinner {
   height: 22rem;
   text-align: left;
   zoom: 1;
 }
-/* line 69, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 container .timer .main .iinner i {
   width: 7.5rem;
   height: 7.5rem;
@@ -2440,7 +2448,7 @@ container .timer .main .iinner i {
   border: 10px solid #ff7680;
   border-radius: 100%;
 }
-/* line 70, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 container .timer .main .iinner i::before {
   text-align: center;
   width: 8rem;
@@ -2454,18 +2462,18 @@ container .timer .main .iinner:after {
   visibility: hidden;
   height: 0;
 }
-/* line 84, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 container .timer .main .icon-play {
   cursor: pointer;
   position: absolute;
 }
-/* line 88, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 container .timer .main .icon-pause {
   cursor: pointer;
   display: none;
   position: absolute;
 }
-/* line 94, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 container .timer .next {
   display: none;
   float: left;
@@ -2479,7 +2487,7 @@ container:after {
   height: 0;
 }
 
-/* line 103, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 .skip {
   color: #666;
   background-color: #000;
@@ -2501,25 +2509,21 @@ container:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
 }
 
-/* line 129, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .skip:visited {
   color: #666;
 }
 
-/* line 132, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .skip:hover, .skip:focus {
   background-color: #f6f6f6;
   text-decoration: none;
   outline: none;
 }
 
-/* line 137, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 .skip:active, .skip.active, .skip.is-active {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
   text-decoration: none;
@@ -2532,49 +2536,49 @@ container:after {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* line 149, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 #skip_main {
   background-color: #ff7680;
   border-color: #ff7680;
   color: #FFF;
 }
 
-/* line 155, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 #skip_next:hover, #skip_next:focus {
   background-color: #1B9AF7;
   border-color: #1B9AF7;
   color: #FFF;
 }
 
-/* line 160, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 #skip_next:active, #skip_next.active, #skip_next.is-active {
   background-color: #1B9AF7;
   border-color: #1B9AF7;
   color: #fff;
 }
 
-/* line 166, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 #skip_next {
   background-color: #4CB0F9;
   border-color: #4CB0F9;
   color: #FFF;
 }
 
-/* line 173, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 #skip_main:hover, #skip_main:focus {
   background-color: #FF4351;
   border-color: #FF4351;
   color: #FFF;
 }
 
-/* line 178, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 #skip_main:active, #skip_main.active, #skip_main.is-active {
   background-color: #FF4351;
   border-color: #FF4351;
   color: #fff;
 }
 
-/* line 184, ../sass/style.scss */
+/* line 186, ../sass/style.scss */
 .set {
   padding-top: 2rem;
   float: left;
@@ -2582,7 +2586,7 @@ container:after {
   height: 100%;
   margin-left: -50%;
 }
-/* line 191, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 .set fieldset {
   margin-top: 3.125rem;
   width: 40%;
@@ -2598,17 +2602,17 @@ container:after {
   -webkit-box-shadow: 3px 3px 10px #666;
   position: relative;
 }
-/* line 192, ../sass/style.scss */
+/* line 194, ../sass/style.scss */
 .set fieldset p, .set fieldset div {
   padding-top: 1.25rem;
 }
-/* line 195, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 .set fieldset span {
   font-weight: bold;
   font-size: 1.25rem;
   margin-left: 5px;
 }
-/* line 200, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .set fieldset select {
   outline-color: #424b50;
   padding-left: 1em;
@@ -2623,7 +2627,7 @@ container:after {
   width: 21.25rem;
   text-align: center;
 }
-/* line 230, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 .set fieldset legend {
   padding: 5px 10px;
   background-color: #424b50;
@@ -2640,54 +2644,54 @@ container:after {
 }
 
 @media screen and (max-width: 1100px) and (min-width: 820px) {
-  /* line 250, ../sass/style.scss */
+  /* line 252, ../sass/style.scss */
   .timer {
     margin: 0;
   }
-  /* line 252, ../sass/style.scss */
+  /* line 254, ../sass/style.scss */
   .timer .inner {
     margin: 0;
   }
-  /* line 254, ../sass/style.scss */
+  /* line 256, ../sass/style.scss */
   .timer .inner .main {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 820px) {
-  /* line 262, ../sass/style.scss */
+  /* line 264, ../sass/style.scss */
   .timer {
     margin: 0;
   }
-  /* line 264, ../sass/style.scss */
+  /* line 266, ../sass/style.scss */
   .timer .inner {
     margin: 0px;
   }
-  /* line 266, ../sass/style.scss */
+  /* line 268, ../sass/style.scss */
   .timer .inner .main {
     margin-left: 0;
   }
 
-  /* line 271, ../sass/style.scss */
+  /* line 273, ../sass/style.scss */
   .skip {
     width: 21rem;
   }
 
-  /* line 274, ../sass/style.scss */
+  /* line 276, ../sass/style.scss */
   .set {
     float: right;
     margin-left: 0;
     width: 100%;
   }
-  /* line 276, ../sass/style.scss */
+  /* line 278, ../sass/style.scss */
   .set fieldset select {
     width: 19.8rem;
   }
-  /* line 283, ../sass/style.scss */
+  /* line 285, ../sass/style.scss */
   .set .skip, .set fieldset {
     margin-left: 10%;
   }
 }
-/* line 289, ../sass/style.scss */
+/* line 291, ../sass/style.scss */
 footer {
   height: 12.5rem;
 }

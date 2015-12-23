@@ -16,6 +16,12 @@ $set_color : #424b50;
 	zoom:1;
 }
 
+*{
+	-webkit-transition-property: all;
+	        transition-property: all;
+	-webkit-transition-duration: .3s;
+	        transition-duration: .3s; 
+}
 
 body{
 	background-color: #fff;
@@ -120,11 +126,7 @@ container{
 	border-radius: 3px;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-	-webkit-transition-property: all;
-	        transition-property: all;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s; 
+	        box-sizing: border-box; 
 }
 .skip:visited {
     color: #666; 
