@@ -18,7 +18,7 @@ function setCookieMin(){
 	document.cookie = cookieString+";visited=yes; expires=" + data.toGMTString();  
 }
 
-function getCookieMin(){  
+function getCookieMin(){   
 	if (document.cookie) {
 		var cString = document.cookie;
 		var bString = cString.split(";");
@@ -37,6 +37,8 @@ function getCookieMin(){
 	}else{
 		return false;
 	}
+	play("main_timer_play","main");
+	setTimer("main");
 }
 
 function getSelect(id) {

@@ -72,8 +72,9 @@ container{
 			.iinner{
 				height: 22rem;
 				text-align: left;
-				i{  
+				i{    
 					&::before{
+						position: relative;
 						text-align: center;
 						width: 8rem;
 						height: 11.25rem;
@@ -275,6 +276,7 @@ container{
 					width: 100%;
 					margin: 0;
 					.iinner{ 
+
 						width: 328px;
 						text-align: center; 
 						margin: auto;
