@@ -41,9 +41,9 @@ container{
 		.inner{	
 			margin-left: 10%;
 			margin-right: $right_section_width;
+			height: 528px;
 		}
-		.main{ 
-			height: 100%;
+		.main{  
 			width: 20.5rem;
 			margin-left: 25%;
 			.timer_display{
@@ -74,7 +74,6 @@ container{
 				div{		
 					width: 336px;
 					height: 100%;
-					color: $main_color;
 					font-size: 8rem;
 					i{   
 						display: block;
@@ -87,19 +86,24 @@ container{
 						border-radius: 100%;
 					}  
 					.icon-paly{
+
 					}
 					.icon-pause{ 
 						display: none;
-						margin-top: -332px;
 					}
+				}
+				.div_icon_play{  
+				}
+				.div_icon_pause{ 
+						padding-top: 20px;
+					margin-top: -372px; 
 				}
 			} 
 			.icon-play{
 				cursor: pointer; 
 			}
 			.icon-pause{
-				cursor: pointer;
-				display: none; 
+				cursor: pointer; 
 			} 
 		}
 		.next{
@@ -279,7 +283,6 @@ container{
 					width: 100%;
 					margin: 0;
 					.iinner{ 
-
 						width: 328px;
 						text-align: center; 
 						margin: auto;
