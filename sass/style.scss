@@ -46,7 +46,7 @@ container{
 			height: 100%;
 			width: 20.5rem;
 			margin-left: 25%;
-			div{
+			.timer_display{
 				height: 100%;
 				color: $main_color;
 				font-size: 8rem;
@@ -70,37 +70,40 @@ container{
 				outline-color:$main_color;
 			}
 			.iinner{
-				height: 22rem;
-				text-align: left;
-				i{    
-					&::before{
-						position: relative;
-						text-align: center;
-						width: 8rem;
-						height: 11.25rem;
+				height: 22rem; 
+				div{		
+					width: 336px;
+					height: 100%;
+					color: $main_color;
+					font-size: 8rem;
+					i{   
+						display: block;
+						position: relative; 
+						width: 7.5rem;
+						height: 7.5rem;
+						margin-top: 1.25rem;
+						padding:5.875rem;  
+						border:10px solid $main_color;
+						border-radius: 100%;
+					}  
+					.icon-paly{
 					}
-					width: 7.5rem;
-					height: 7.5rem;
-					margin-top: 1.25rem;
-					padding:5.875rem;  
-					border:10px solid $main_color;
-					border-radius: 100%;
-				} 
-			@include clearfix;
+					.icon-pause{ 
+						display: none;
+						margin-top: -332px;
+					}
+				}
 			} 
 			.icon-play{
-				cursor: pointer;
-				position: absolute;
+				cursor: pointer; 
 			}
 			.icon-pause{
 				cursor: pointer;
-				display: none;
-				position: absolute;
+				display: none; 
 			} 
 		}
 		.next{
-			display: none;
-			float: left;
+			display: none; 
 		}
 	}
 	@include clearfix;

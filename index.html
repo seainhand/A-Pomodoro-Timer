@@ -15,7 +15,7 @@
 		<section class="timer">
 			<div class="inner">
 				<section class="main" id="main">
-					<div id="main_timer">25:00</div>
+					<div class="timer_display" id="main_timer">25:00</div>
 					<select name="main_minutes" id="main_minutes" onchange="setTimer('main')" > 
 						<option value="01">01:00</option>
 						<option value="02">02:00</option>
@@ -79,12 +79,14 @@
 						<option value="60">60:00</option>
 					</select> 
 					<div  class = "iinner">
-						<i class="icon-play" id="main_timer_play" onclick="play(this.id,'main')"></i>
-						<i class="icon-pause" id="main_timer_pause" onclick="play(this.id,'main')"></i>
+						<div>
+						<i class="icon-play" id="main_timer_play" onclick="play(this.id,'main')"></i></div>
+						<div>
+						<i class="icon-pause" id="main_timer_pause" onclick="play(this.id,'main')"></i></div>
 					</div>
 				</section> 
 				<section class="next" id="next">
-					<div id="next_timer" style="color:#4CB0F9">5:00</div>
+					<div id="next_timer"  class="timer_display"  style="color:#4CB0F9">5:00</div>
 					<select name="next_minutes" id="next_minutes" onchange="setTimer('next')" style="border: 3px solid #4CB0F9"> 
 						<option value="01">01:00</option>
 						<option value="02">02:00</option>
