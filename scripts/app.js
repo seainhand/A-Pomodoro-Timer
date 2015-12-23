@@ -37,8 +37,8 @@ function getCookieMin(){
 	}else{
 		return false;
 	}
-	play("main_timer_play","main");
-	setTimer("main");
+	play("main_timer_play","main"); 
+	play("main_timer_pause","main"); 
 }
 
 function getSelect(id) {
