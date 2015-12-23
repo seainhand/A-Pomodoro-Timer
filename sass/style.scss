@@ -243,7 +243,8 @@ container{
 			-webkit-box-shadow:2px 2px 4px #666;
 
 			position:absolute;
-			left:10px;top:-11px;
+			left:10px;
+			top:-11px;
 		}
 	}
 }
@@ -261,31 +262,59 @@ container{
 }
 
 @media screen and (max-width: 820px) {
-	.timer{
-			margin:0;
-		.inner{
-			margin: 0px;
-			.main{
+	container{
+		.timer{
+				margin:0;
+				width: 100%;
+			.inner{
+				text-align: center;
+				width: 100%; 
+				margin-left: 0;
+				margin-right: 0;
+				.main{
+					width: 100%;
+					margin: 0;
+					.iinner{ 
+						width: 328px;
+						text-align: center; 
+						margin: auto;
+					}
+				}
+			}
+		}
+		.skip{
+			width: 21rem;
+		}
+		.set{
+			margin-left: 0;
+			margin-right: 0; 
+			width: 100%;
+			text-align: center; 
+			.fieldset{
+				margin: auto;
+				width: 356px;
+				text-align: center;
+				fieldset {   
+					position: inherit;
+					text-align: left;
+					display: block;
+					width:21rem;
+					margin-left: 0;
+					margin-right: 0;
+					legend{
+						position: relative;
+						margin-top:-10px;
+					} 
+					select{
+						width: 19.8rem;
+					}
+				} 
+			}
+			.skip,fieldset{
 				margin-left: 0;
 			}
 		}
-	}
-	.skip{
-		width: 21rem;
-	}
-	.set{
-		fieldset {
-			select{
-				width: 19.8rem;
-			}
-		}
-		float: right;
-		margin-left: 0;
-		width: 100%;
-		.skip,fieldset{
-			margin-left: 10%;
-		}
-	}
+	}	
 }
 
 footer{

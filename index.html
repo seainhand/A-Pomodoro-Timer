@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<title>Pomodoro Timer</title>
 	<link href="http://fonts.useso.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext" rel='stylesheet'>	
     <link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
@@ -153,101 +156,102 @@
 		</section>
 		<section class="set">
 			<div class="skip" id="skip_main" onclick="skip(this)" name="main">skip</div>
-			<fieldset>
-				<section>
-					<legend>设置</legend>
-					<p>每组工作次数？</p><select name="" id="select_goal_main_num" onchange="setMainNum()">
-						<option value="1">1次</option>
-						<option value="2">2次</option>
-						<option value="3">3次</option>
-						<option value="4" selected>4次</option>
-						<option value="5">5次</option>
-						<option value="6">6次</option>
-						<option value="7">7次</option>
-						<option value="8">8次</option>
-						<option value="9">9次</option>
-						<option value="10">10次</option>
-					</select>
-					<br>	
-					<p>一共进行几组</p><select name="" id="select_goal_turn"  onchange="setTurn()">
-						<option value="1">1组</option>
-						<option value="2" selected>2组</option>
-						<option value="3">3组</option>
-						<option value="4">4组</option>
-						<option value="5">5组</option>
-						<option value="6">6组</option>
-						<option value="7">7组</option>
-						<option value="8">8组</option>
-						<option value="9">9组</option>
-						<option value="10">10组</option>
-					</select>
-					<p>每组后的休息时间？</p><select name="long_minutes" id="long_minutes" onchange="setTimer('long')">
-						<option value="01">01:00</option>
-						<option value="02">02:00</option>
-						<option value="03">03:00</option>
-						<option value="04">04:00</option>
-						<option value="05">05:00</option>
-						<option value="06">06:00</option>
-						<option value="07">07:00</option>
-						<option value="08">08:00</option>
-						<option value="09">09:00</option>
-						<option value="10">10:00</option>
-						<option value="11">11:00</option>
-						<option value="12">12:00</option>
-						<option value="13">13:00</option>
-						<option value="14">14:00</option>
-						<option value="15">15:00</option>
-						<option value="16">16:00</option>
-						<option value="17">17:00</option>
-						<option value="18">18:00</option>
-						<option value="19">19:00</option>
-						<option value="20">20:00</option>
-						<option value="21">21:00</option>
-						<option value="22">22:00</option>
-						<option value="23">23:00</option>
-						<option value="24">24:00</option>
-						<option value="25">25:00</option>
-						<option value="26">26:00</option>
-						<option value="27">27:00</option>
-						<option value="28">28:00</option>
-						<option value="29">29:00</option>
-						<option value="30">30:00</option>
-						<option value="31">31:00</option>
-						<option value="32">32:00</option>
-						<option value="33">33:00</option>
-						<option value="34">34:00</option>
-						<option value="35">35:00</option>
-						<option value="36">36:00</option>
-						<option value="37">37:00</option>
-						<option value="38">38:00</option>
-						<option value="39">39:00</option>
-						<option value="40" selected>40:00</option>
-						<option value="41">41:00</option>
-						<option value="42">42:00</option>
-						<option value="43">43:00</option>
-						<option value="44">44:00</option>
-						<option value="45">45:00</option>
-						<option value="46">46:00</option>
-						<option value="47">47:00</option>
-						<option value="48">48:00</option>
-						<option value="49">49:00</option>
-						<option value="50">50:00</option>
-						<option value="51">51:00</option>
-						<option value="52">52:00</option>
-						<option value="53">53:00</option>
-						<option value="54">54:00</option>
-						<option value="55">55:00</option>
-						<option value="56">56:00</option>
-						<option value="57">57:00</option>
-						<option value="58">58:00</option>
-						<option value="59">59:00</option>
-						<option value="60">60:00</option>
-					</select>
-				</section>
-				<div>工作次数：<span id="main_num" style="margin-left:40px">0</span><span>/</span><span id="goal_main_num">4</span></div>
-				<div>总体次数:<span id="all_num" style="margin-left:40px">0</span><span>/</span><span id="goal_all_num">16</span></div>
-			</fieldset>
-				
+			<div class="fieldset">	
+				<fieldset>
+					<section>
+						<legend>设置</legend>
+						<p>每组工作次数？</p><select name="" id="select_goal_main_num" onchange="setMainNum()">
+							<option value="1">1次</option>
+							<option value="2">2次</option>
+							<option value="3">3次</option>
+							<option value="4" selected>4次</option>
+							<option value="5">5次</option>
+							<option value="6">6次</option>
+							<option value="7">7次</option>
+							<option value="8">8次</option>
+							<option value="9">9次</option>
+							<option value="10">10次</option>
+						</select>
+						<br>	
+						<p>一共进行几组</p><select name="" id="select_goal_turn"  onchange="setTurn()">
+							<option value="1">1组</option>
+							<option value="2" selected>2组</option>
+							<option value="3">3组</option>
+							<option value="4">4组</option>
+							<option value="5">5组</option>
+							<option value="6">6组</option>
+							<option value="7">7组</option>
+							<option value="8">8组</option>
+							<option value="9">9组</option>
+							<option value="10">10组</option>
+						</select>
+						<p>每组后的休息时间？</p><select name="long_minutes" id="long_minutes" onchange="setTimer('long')">
+							<option value="01">01:00</option>
+							<option value="02">02:00</option>
+							<option value="03">03:00</option>
+							<option value="04">04:00</option>
+							<option value="05">05:00</option>
+							<option value="06">06:00</option>
+							<option value="07">07:00</option>
+							<option value="08">08:00</option>
+							<option value="09">09:00</option>
+							<option value="10">10:00</option>
+							<option value="11">11:00</option>
+							<option value="12">12:00</option>
+							<option value="13">13:00</option>
+							<option value="14">14:00</option>
+							<option value="15">15:00</option>
+							<option value="16">16:00</option>
+							<option value="17">17:00</option>
+							<option value="18">18:00</option>
+							<option value="19">19:00</option>
+							<option value="20">20:00</option>
+							<option value="21">21:00</option>
+							<option value="22">22:00</option>
+							<option value="23">23:00</option>
+							<option value="24">24:00</option>
+							<option value="25">25:00</option>
+							<option value="26">26:00</option>
+							<option value="27">27:00</option>
+							<option value="28">28:00</option>
+							<option value="29">29:00</option>
+							<option value="30">30:00</option>
+							<option value="31">31:00</option>
+							<option value="32">32:00</option>
+							<option value="33">33:00</option>
+							<option value="34">34:00</option>
+							<option value="35">35:00</option>
+							<option value="36">36:00</option>
+							<option value="37">37:00</option>
+							<option value="38">38:00</option>
+							<option value="39">39:00</option>
+							<option value="40" selected>40:00</option>
+							<option value="41">41:00</option>
+							<option value="42">42:00</option>
+							<option value="43">43:00</option>
+							<option value="44">44:00</option>
+							<option value="45">45:00</option>
+							<option value="46">46:00</option>
+							<option value="47">47:00</option>
+							<option value="48">48:00</option>
+							<option value="49">49:00</option>
+							<option value="50">50:00</option>
+							<option value="51">51:00</option>
+							<option value="52">52:00</option>
+							<option value="53">53:00</option>
+							<option value="54">54:00</option>
+							<option value="55">55:00</option>
+							<option value="56">56:00</option>
+							<option value="57">57:00</option>
+							<option value="58">58:00</option>
+							<option value="59">59:00</option>
+							<option value="60">60:00</option>
+						</select>
+					</section>
+					<div>工作次数：<span id="main_num" style="margin-left:40px">0</span><span>/</span><span id="goal_main_num">4</span></div>
+					<div>总体次数:<span id="all_num" style="margin-left:40px">0</span><span>/</span><span id="goal_all_num">16</span></div>
+				</fieldset>	
+			</div>	
 		</section>
 	</container>
 	<footer></footer>

@@ -2644,54 +2644,84 @@ container:after {
 }
 
 @media screen and (max-width: 1100px) and (min-width: 820px) {
-  /* line 252, ../sass/style.scss */
+  /* line 253, ../sass/style.scss */
   .timer {
     margin: 0;
   }
-  /* line 254, ../sass/style.scss */
+  /* line 255, ../sass/style.scss */
   .timer .inner {
     margin: 0;
   }
-  /* line 256, ../sass/style.scss */
+  /* line 257, ../sass/style.scss */
   .timer .inner .main {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 820px) {
-  /* line 264, ../sass/style.scss */
-  .timer {
-    margin: 0;
-  }
   /* line 266, ../sass/style.scss */
-  .timer .inner {
-    margin: 0px;
-  }
-  /* line 268, ../sass/style.scss */
-  .timer .inner .main {
-    margin-left: 0;
-  }
-
-  /* line 273, ../sass/style.scss */
-  .skip {
-    width: 21rem;
-  }
-
-  /* line 276, ../sass/style.scss */
-  .set {
-    float: right;
-    margin-left: 0;
+  container .timer {
+    margin: 0;
     width: 100%;
   }
-  /* line 278, ../sass/style.scss */
-  .set fieldset select {
-    width: 19.8rem;
+  /* line 269, ../sass/style.scss */
+  container .timer .inner {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 274, ../sass/style.scss */
+  container .timer .inner .main {
+    width: 100%;
+    margin: 0;
+  }
+  /* line 277, ../sass/style.scss */
+  container .timer .inner .main .iinner {
+    width: 328px;
+    text-align: center;
+    margin: auto;
   }
   /* line 285, ../sass/style.scss */
-  .set .skip, .set fieldset {
-    margin-left: 10%;
+  container .skip {
+    width: 21rem;
+  }
+  /* line 288, ../sass/style.scss */
+  container .set {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  /* line 293, ../sass/style.scss */
+  container .set .fieldset {
+    margin: auto;
+    width: 356px;
+    text-align: center;
+  }
+  /* line 297, ../sass/style.scss */
+  container .set .fieldset fieldset {
+    position: inherit;
+    text-align: left;
+    display: block;
+    width: 21rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 304, ../sass/style.scss */
+  container .set .fieldset fieldset legend {
+    position: relative;
+    margin-top: -10px;
+  }
+  /* line 308, ../sass/style.scss */
+  container .set .fieldset fieldset select {
+    width: 19.8rem;
+  }
+  /* line 313, ../sass/style.scss */
+  container .set .skip, container .set fieldset {
+    margin-left: 0;
   }
 }
-/* line 291, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 footer {
   height: 12.5rem;
 }
