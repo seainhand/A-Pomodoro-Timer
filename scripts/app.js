@@ -131,19 +131,20 @@ function setTimer(timer) {
 		var objS = getId(timer + "_minutes");
 		var time = objS.options[objS.selectedIndex].value;
 		window.cur_long_time = new Date(1000 * 60 * time);;
-	};
-	btnReset();
-	window.clearInterval(interval)
-	var objS = getId(timer + "_minutes");
-	var time = objS.options[objS.selectedIndex].value;
-	if (timer == "main") {
-		window.cur_main_time = new Date(1000 * 60 * time);
-		getId(timer + "_timer").innerHTML = time + ":" + "00";
-	};
-	if (timer == "next") {
-		window.cur_next_time = new Date(1000 * 60 * time);
-		getId(timer + "_timer").innerHTML = time + ":" + "00";
-	};
+	}else{
+		btnReset();
+		window.clearInterval(interval)
+		var objS = getId(timer + "_minutes");
+		var time = objS.options[objS.selectedIndex].value;
+		if (timer == "main") {
+			window.cur_main_time = new Date(1000 * 60 * time);
+			getId(timer + "_timer").innerHTML = time + ":" + "00";
+		};
+		if (timer == "next") {
+			window.cur_next_time = new Date(1000 * 60 * time);
+			getId(timer + "_timer").innerHTML = time + ":" + "00";
+		};
+	}
 	setCookieMin();
 }
 
